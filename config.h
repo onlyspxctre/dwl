@@ -133,6 +133,7 @@ static const Key keys[] = {
 	/* modifier                  key                 function        argument */
 	{ MODKEY,                    XKB_KEY_r,          spawn,          {.v = menucmd} },
 	{ MODKEY,                    XKB_KEY_Shift_R,     spawn,          {.v = termcmd} },
+{ MODKEY|WLR_MODIFIER_SHIFT,   XKB_KEY_S,             spawn,        SHCMD("slurp | grim -g - $HOME/Pictures/$(date +'grim_%Y-%m-%d-%H%M%S.png')") },
 	{ MODKEY,                    XKB_KEY_b,          togglebar,      {0} },
 	{ MODKEY,                    XKB_KEY_j,          focusstack,     {.i = +1} },
 	{ MODKEY,                    XKB_KEY_k,          focusstack,     {.i = -1} },
